@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/BlizzardAZ/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/BlizzardAZ/frontend-project-44/actions)",
   "main": "index.js",
-  "type": "module", 
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
   "bin": {
     "brain-games": "bin/brain-games.js"
   },
-  "homepage": "https://github.com/BlizzardAZ/frontend-project-44#readme"
+  "homepage": "https://github.com/BlizzardAZ/frontend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
