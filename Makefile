@@ -4,5 +4,8 @@ install: # установка зависимостей
 brain-games: # выполнение файла brain-games.js	
 	node bin/brain-games.js	
 	
-publish: # собрать архив в тестовом режиме
+publish: # сборь архива для публикации в тестовом режиме
 	npm publish --dry-run
+
+lint: # запуск npx eslint	
+	 npx eslint .
