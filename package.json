@@ -12,12 +12,14 @@
     "url": "git+https://github.com/BlizzardAZ/frontend-project-44.git"
   },
   "author": "BlizzardAZ",
-  "license": "ISC",
+  "email": "sauer6699@gmail.com",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BlizzardAZ/frontend-project-44/issues"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",	
+    "brain-even": "bin/brain-even.js"
   },
   "homepage": "https://github.com/BlizzardAZ/frontend-project-44#readme",
   "dependencies": {
