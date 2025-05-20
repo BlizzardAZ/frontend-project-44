@@ -1,6 +1,6 @@
-#!/usr/bin/env node	
-	
-console.log('Welcome to the Brain Games!');
+#!/usr/bin/env node
 
-import {getRandomInt, isEvenGame} from '../src/brainEven.js'
+console.log('Welcome to the Brain Games!')
+
+import { isEvenGame } from '../src/games/brainEven.js'
 isEvenGame()
