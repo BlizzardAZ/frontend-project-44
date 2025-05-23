@@ -1,9 +1,10 @@
-import { greetUserByName, askRandomQuestion, getAnswer, getCorrectAnswer, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator } from './brainGamesLogic.js'
+import { greetUserByName, askRandomQuestion, getAnswer, calculateResult, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator } from './brainGamesLogic.js'
 
-function brainCalculator() {
+function CalculatorGame() {
   const userName = greetUserByName()
 
   const iterNum = 3
+  let allAnswersCorrect = true
 
   for (let i = 0; i < iterNum; i++) {
     const x = getRandomInt(1, 50)
@@ -14,11 +15,18 @@ function brainCalculator() {
     askRandomQuestion(`Question: ${x} ${operator} ${y}`)
 
     const userAnswer = getAnswer()
-    const correctAnswer = getCorrectAnswer(x, y, operator)
+    const correctAnswer = calculateResult(x, y, operator)
 
-    compareAnswers(userAnswer, correctAnswer)
-  };
-  greetWinnerByName(userName)
+    const isCorrect = compareAnswers(userAnswer, correctAnswer)
+    if (!isCorrect) {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
+      allAnswersCorrect = false
+      break
+    }
+  }
+  if (allAnswersCorrect) {
+    greetWinnerByName(userName)
+  }
 };
 
-export { brainCalculator }
+export { CalculatorGame }

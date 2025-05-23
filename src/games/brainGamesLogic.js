@@ -21,7 +21,7 @@ function getAnswer() {
   return answer
 };
 
-function getCorrectAnswer(x, y, operator) {
+function calculateResult(x, y, operator) {
   switch (operator) {
     case '+':
       return getSum(x, y)
@@ -37,10 +37,10 @@ function getCorrectAnswer(x, y, operator) {
 function compareAnswers(userAnswer, correctAnswer) {
   if (String(userAnswer) === String(correctAnswer)) {
     console.log('Correct!')
+    return true
   }
   else {
-    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-    process.exit()
+    return false
   }
 };
 
@@ -70,4 +70,23 @@ function getRandomMathOperator(arr) {
   return arr[randomIndex]
 };
 
-export { greetUserByName, askRandomQuestion, getAnswer, getCorrectAnswer, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator }
+function getCommonDivisor(x, y) {
+  if (x === 0) return y
+  if (y === 0) return x
+  if (x === y) return x
+
+  if (x < y) {
+    const temp = x
+    x = y
+    y = temp
+  }
+
+  while (y !== 0) {
+    const temp = x % y
+    x = y
+    y = temp
+  }
+  return x
+};
+
+export { greetUserByName, askRandomQuestion, getAnswer, calculateResult, getCommonDivisor, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator }

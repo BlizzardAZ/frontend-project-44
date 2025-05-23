@@ -2,5 +2,5 @@
 
 console.log('Welcome to the Brain Games!')
 
-import { brainCalculator } from '../src/games/brainCalc.js'
-brainCalculator()
+import { CalculatorGame } from '../src/games/brainCalc.js'
+CalculatorGame()
