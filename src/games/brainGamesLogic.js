@@ -89,4 +89,13 @@ function getCommonDivisor(x, y) {
   return x
 };
 
-export { greetUserByName, askRandomQuestion, getAnswer, calculateResult, getCommonDivisor, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator }
+function createProgression(a1, d, length) {
+  const progression = []
+  for (let i = 1; i <= length; i++) {
+    const an = a1 + d * (i - 1)
+    progression.push(an)
+  }
+  return progression
+};
+
+export { greetUserByName, askRandomQuestion, getAnswer, calculateResult, createProgression, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator, getCommonDivisor }

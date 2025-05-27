@@ -11,7 +11,10 @@ brain-calc: # выполнение файла brain-calc.js
 	node bin/brain-calc.js	
 	
 brain-gcd: # выполнение файла brain-gcd.js	
-	node bin/brain-gcd.js
+	node bin/brain-gcd.js	
+
+brain-progression: # выполнение файла brain-progression.js	
+	node bin/brain-progression.js
 	
 publish: # сбор архива для публикации в тестовом режиме
 	npm publish --dry-run
