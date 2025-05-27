@@ -18,8 +18,8 @@
     "url": "https://github.com/BlizzardAZ/frontend-project-44/issues"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js",	
-    "brain-even": "bin/brain-even.js",	
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
     "brain-progression": "bin/brain-progression.js"
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@eslint/create-config": "^1.8.1",
     "@eslint/js": "^9.26.0",
-    "@stylistic/eslint-plugin": "^4.2.0",
+    "@stylistic/eslint-plugin": "^4.4.0",
     "eslint": "^9.26.0",
     "globals": "^16.0.0"
   }
