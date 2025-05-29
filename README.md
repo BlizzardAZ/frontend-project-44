@@ -1,6 +1,6 @@
-### frontend-project-44
+# frontend-project-44
 
-### Hexlet tests and linter status:
+# Hexlet tests and linter status:
 [![Actions Status](https://github.com/BlizzardAZ/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/BlizzardAZ/frontend-project-44/actions)
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=BlizzardAZ_frontend-project-44)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BlizzardAZ_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BlizzardAZ_frontend-project-44)
@@ -8,26 +8,44 @@
 
 The first frontend-project featuring 5 small terminal games.
 
-### Start
+## Start
+
+```bash
 make
+```
 
-### Run "is number even" game
-make brain-even: 
+## Run "is number even" game
 
-### Run "calculator" game
-make brain-calc 
+```bash
+make brain-even
+``` 
 
-### Run "get common divisor" game
-make brain-gcd 
+## Run "calculator" game
+
+```bash
+make brain-calc
+``` 
+
+## Run "get common divisor" game
+
+```bash
+make brain-gcd
+``` 
 	
-### Run "find the missing progression element" game
-make brain-progression	
+## Run "find the missing progression element" game
 
-### Run "is number prime" game
+```bash
+make brain-progression
+```	
+
+## Run "is number prime" game
+
+```bash
 make brain-prime 
+```
 
 
-### Asciinema brain-even
+## Asciinema brain-even
 https://asciinema.org/a/VrlgD6Wv00DcomhtEjSZbtzAN
 ### Asciinema brain-calc
 https://asciinema.org/a/6NJ7HAvyPc9IkQB4TJ8aM6UlW
