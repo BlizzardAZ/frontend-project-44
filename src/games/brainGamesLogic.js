@@ -98,4 +98,16 @@ function createProgression(a1, d, length) {
   return progression
 };
 
-export { greetUserByName, askRandomQuestion, getAnswer, calculateResult, createProgression, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator, getCommonDivisor }
+function isPrimeNum(num) {
+  if (num <= 1) {
+    return false
+  };
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return 'no'
+    }
+  }
+  return 'yes'
+}
+
+export { greetUserByName, askRandomQuestion, getAnswer, calculateResult, createProgression, isPrimeNum, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator, getCommonDivisor }
