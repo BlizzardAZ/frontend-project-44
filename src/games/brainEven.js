@@ -1,32 +1,30 @@
-import readlineSync from 'readline-sync'
-
-function getRandomInt(min, max) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1)) + min
-};
+import { greetUserByName, askRandomQuestion, getAnswer, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
 
 function isEvenGame() {
-  const userName = readlineSync.question('May I have your name? ')
-  console.log('Hello, ' + userName + '!')
-  console.log('Answer "yes" if the number is even, otherwise answer "no".')
+  const userName = greetUserByName()
 
-  for (let i = 0; i < 3; i++) {
-    const randomInt = getRandomInt(1, 1000)
-    console.log(`Question: ${randomInt}`)
+  const iterNum = 3
+  let allAnswersCorrect = true
 
-    const correctAnswer = (randomInt % 2 === 0) ? 'yes' : 'no'
-    const userAnswer = readlineSync.question('Your answer: ').toLowerCase()
+  for (let i = 0; i < iterNum; i++) {
+    askRandomQuestion('Answer "yes" if the number is even, otherwise answer "no".')
 
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!')
-    }
-    else {
+    const num = getRandomInt(0, 100)
+    console.log(`Question: ${num}`)
+
+    const userAnswer = getAnswer().toLowerCase()
+    const correctAnswer = (num % 2 === 0) ? 'yes' : 'no'
+
+    const isCorrect = compareAnswers(userAnswer, correctAnswer)
+    if (!isCorrect) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-      return
+      allAnswersCorrect = false
+      break
     }
-  };
-  console.log(`Congratulations, ${userName}!`)
+  }
+  if (allAnswersCorrect) {
+    greetWinnerByName(userName)
+  }
 };
 
 export { isEvenGame }
