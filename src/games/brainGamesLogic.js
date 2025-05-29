@@ -100,7 +100,7 @@ function createProgression(a1, d, length) {
 
 function isPrimeNum(num) {
   if (num <= 1) {
-    return false
+    return 'no'
   };
   for (let i = 2; i < num; i++) {
     if (num % i === 0) {
