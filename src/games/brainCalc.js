@@ -1,32 +1,35 @@
-import { greetUserByName, askRandomQuestion, getAnswer, calculateResult, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator } from './brainGamesLogic.js'
 
-function CalculatorGame() {
-  const userName = greetUserByName()
+import { getRandomInt, getRandomMathOperator } from './brainGamesLogic.js'
+import { startBrainGames } from '../index.js'
 
-  const iterNum = 3
-  let allAnswersCorrect = true
+const gameDescription = 'What is the result of the expression?'
 
-  for (let i = 0; i < iterNum; i++) {
-    const x = getRandomInt(1, 50)
-    const y = getRandomInt(1, 10)
-    const operator = getRandomMathOperator(['+', '-', '*'])
+function generateQuestionAnswer() {
+  const x = getRandomInt(1, 50)
+  const y = getRandomInt(1, 10)
+  const operator = getRandomMathOperator(['+', '-', '*'])
+  const question = `Question: ${x} ${operator} ${y}`
 
-    askRandomQuestion('What is the result of the expression?')
-    askRandomQuestion(`Question: ${x} ${operator} ${y}`)
-
-    const userAnswer = getAnswer()
-    const correctAnswer = calculateResult(x, y, operator)
-
-    const isCorrect = compareAnswers(userAnswer, correctAnswer)
-    if (!isCorrect) {
-      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-      allAnswersCorrect = false
+  let correctAnswer 
+  switch (operator) {
+    case '+':
+      correctAnswer = x + y
       break
+    case '-':
+      correctAnswer = x - y
+      break
+    case '*':
+      correctAnswer = x * y
+      break
+    default:
+      return null
     }
-  }
-  if (allAnswersCorrect) {
-    greetWinnerByName(userName)
-  }
-};
+  
+  return { question, correctAnswer }
+}
 
-export { CalculatorGame }
+function runBrainCalc() {
+  startBrainGames(gameDescription, generateQuestionAnswer)
+}
+
+export { runBrainCalc }
