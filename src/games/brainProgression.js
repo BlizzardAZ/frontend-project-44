@@ -1,7 +1,9 @@
 import { greetUserByName, askRandomQuestion, getAnswer, createProgression, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
 
 function guessProgressionNumGame() {
+  console.log('Welcome to the Brain Games!')
   const userName = greetUserByName()
+
   const iterNum = 3
   let allAnswersCorrect = true
 

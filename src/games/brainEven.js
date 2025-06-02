@@ -1,6 +1,7 @@
 import { greetUserByName, askRandomQuestion, getAnswer, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
 
 function isEvenGame() {
+  console.log('Welcome to the Brain Games!')
   const userName = greetUserByName()
 
   const iterNum = 3
