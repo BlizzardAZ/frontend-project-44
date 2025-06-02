@@ -1,7 +1,6 @@
 import { greetUserByName, askRandomQuestion, getAnswer, calculateResult, compareAnswers, greetWinnerByName, getRandomInt, getRandomMathOperator } from './brainGamesLogic.js'
 
 function CalculatorGame() {
-  console.log('Welcome to the Brain Games!')
   const userName = greetUserByName()
 
   const iterNum = 3

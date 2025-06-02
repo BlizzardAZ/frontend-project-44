@@ -8,13 +8,20 @@
 
 The first frontend-project featuring 5 small terminal games.
 
+
+## Setup
+
+```make install
+make
+```
+
 ## Start
 
 ```bash
 make
 ```
 
-## Run "is number even" game
+## Run "is even" game
 
 ```bash
 make brain-even

@@ -1,7 +1,6 @@
 import { greetUserByName, askRandomQuestion, getAnswer, getCommonDivisor, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
 
 function getCommonDivisorGame() {
-  console.log('Welcome to the Brain Games!')
   const userName = greetUserByName()
 
   const iterNum = 3

@@ -1,6 +1,7 @@
-import readlineSync from 'readline-sync'
+import { greetUserByName } from './games/brainGamesLogic.js'
 
-export default function userGreeting() {
-  const userName = readlineSync.question('May I have your name? ')
-  console.log('Hello, ' + userName + '!')
+function brainGames() {
+  greetUserByName()
 }
+
+export { brainGames }
