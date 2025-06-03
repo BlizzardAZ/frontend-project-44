@@ -1,39 +1,52 @@
 import readlineSync from 'readline-sync'
-import { brainGames } from './cli.js'
 import { runBrainCalc } from './games/brainCalc.js'
 
-function startBrainGames(gameDescription, generateQuestionAnswer) {
-    brainGames()
+function startGames() {
+  console.log('Welcome to the Brain Games!')
+  const userName = readlineSync.question('May I have your name? ')
+  console.log('Hello, ' + userName + '!')
 
-    const chosenGame = readlineSync.question('')
-    switch (chosenGame) {
-        case 'brain-calc':
-            runBrainCalc()
-        case 'brain-even':
-            ?????
-        case 'brain-gcd':
-            ?????
-        case 'brain-prime':
-            ?????
-        case 'brain-progression':
-            ?????
-    }
-    
-    console.log('Welcome to the Brain Games!')
-    const userName = readlineSync.question('May I have your name? ')
-    console.log('Hello, ' + userName + '!')
-
-    for (let i = 0; i < 3; i++) {
-        console.log(gameDescription)
-        const userAnswer = readlineSync.question('Your answer: ')
-        if (String(userAnswer) === String(correctAnswer)) {
-            console.log('Correct!')
-        } else {
-            console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-            break
-        }
-    }
-    console.log(`Congratulations, ${userName}!`)
+  const gameName = readlineSync.question(' ')
+  switch (gameName) {
+    case 'brain-calc':
+      runBrainCalc()
+      break
+    // case 'brain-even':
+    //   runBrain()
+    //   break
+    // case 'brain-gcd':
+    //   runBrain()
+    //   break
+    // case 'brain-prime':
+    //   runBrain()
+    //   break
+    // case 'brain-progression':
+    //   runBrain()
+    //   break
+    default:
+      console.log('Enter correct game name')
+  }
 }
 
-export { startBrainGames}
+function runChosenGame(gameDescription, generateQuestionAnswer) {
+  console.log('Welcome to the Brain Games!')
+  const userName = readlineSync.question('May I have your name? ')
+  console.log('Hello, ' + userName + '!')
+  console.log(gameDescription)
+
+  for (let i = 0; i < 3; i++) {
+    const { question, correctAnswer } = generateQuestionAnswer()
+    console.log(question)
+    const userAnswer = readlineSync.question('Your answer: ')
+    if (String(userAnswer) === String(correctAnswer)) {
+      console.log('Correct!')
+    }
+    else {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
+      return
+    }
+  }
+  console.log(`Congratulations, ${userName}!`)
+}
+
+export { runChosenGame }
