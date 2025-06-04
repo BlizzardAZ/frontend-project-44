@@ -1,34 +1,6 @@
 import readlineSync from 'readline-sync'
-import { runBrainCalc } from './games/brainCalc.js'
 
-function startGames() {
-  console.log('Welcome to the Brain Games!')
-  const userName = readlineSync.question('May I have your name? ')
-  console.log('Hello, ' + userName + '!')
-
-  const gameName = readlineSync.question(' ')
-  switch (gameName) {
-    case 'brain-calc':
-      runBrainCalc()
-      break
-    // case 'brain-even':
-    //   runBrain()
-    //   break
-    // case 'brain-gcd':
-    //   runBrain()
-    //   break
-    // case 'brain-prime':
-    //   runBrain()
-    //   break
-    // case 'brain-progression':
-    //   runBrain()
-    //   break
-    default:
-      console.log('Enter correct game name')
-  }
-}
-
-function runChosenGame(gameDescription, generateQuestionAnswer) {
+function runGame(gameDescription, generateQuestionAnswer) {
   console.log('Welcome to the Brain Games!')
   const userName = readlineSync.question('May I have your name? ')
   console.log('Hello, ' + userName + '!')
@@ -49,4 +21,4 @@ function runChosenGame(gameDescription, generateQuestionAnswer) {
   console.log(`Congratulations, ${userName}!`)
 }
 
-export { runChosenGame }
+export { runGame }

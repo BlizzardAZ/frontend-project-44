@@ -6,56 +6,56 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BlizzardAZ_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BlizzardAZ_frontend-project-44)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=BlizzardAZ_frontend-project-44&metric=bugs)](https://sonarcloud.io/summary/new_code?id=BlizzardAZ_frontend-project-44)
 
-The first frontend-project featuring 5 small terminal games.
+The project features 5 small command line games.
 
 
-## Setup
+# Setup
 
-```make install
-make
+```bash
+make install
 ```
 
 ## Start
 
 ```bash
-make
+brain-games
 ```
 
 ## Run "is even" game
 
 ```bash
-make brain-even
+brain-even
 ``` 
 
 ## Run "calculator" game
 
 ```bash
-make brain-calc
+brain-calc
 ``` 
 
 ## Run "get common divisor" game
 
 ```bash
-make brain-gcd
+brain-gcd
 ``` 
 	
 ## Run "find the missing progression element" game
 
 ```bash
-make brain-progression
+brain-progression
 ```	
 
 ## Run "is number prime" game
 
 ```bash
-make brain-prime 
+brain-prime 
 ```
 
 
 ## Asciinema brain-even
 https://asciinema.org/a/VrlgD6Wv00DcomhtEjSZbtzAN
 ### Asciinema brain-calc
-https://asciinema.org/a/6NJ7HAvyPc9IkQB4TJ8aM6UlW
+https://asciinema.org/a/sTMZR6vL9jc3tPQvMTVxJxFgG
 ### Asciinema brain-gcd
 https://asciinema.org/a/04Vm4hrGq6ytPqTe4UtMVtfqC
 ### Asciinema brain-progression

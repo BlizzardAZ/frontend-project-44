@@ -1,19 +1,18 @@
-import { runChosenGame } from '../index.js'
+import { runGame } from '../index.js'
 
-function getRandomInt(min, max) {
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1)) + min
-};
+function runBrainCalcGame() {
+  function getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  };
 
-function getRandomMathOperator(arr) {
-  const randomIndex = getRandomInt(0, arr.length - 1)
-  return arr[randomIndex]
-};
+  function getRandomMathOperator(arr) {
+    const randomIndex = getRandomInt(0, arr.length - 1)
+    return arr[randomIndex]
+  };
 
-const gameDescription = 'What is the result of the expression?'
-
-function runBrainCalc() {
+  const gameDescription = 'What is the result of the expression?'
   function generateQuestionAnswer() {
     const x = getRandomInt(1, 50)
     const y = getRandomInt(1, 10)
@@ -36,7 +35,8 @@ function runBrainCalc() {
     }
     return { question, correctAnswer }
   }
-  runChosenGame(gameDescription, generateQuestionAnswer)
+
+  runGame(gameDescription, generateQuestionAnswer)
 }
 
-export { runBrainCalc }
+export { runBrainCalcGame }
