@@ -53,7 +53,7 @@ brain-prime
 
 
 ## Asciinema brain-even
-https://asciinema.org/a/VrlgD6Wv00DcomhtEjSZbtzAN
+https://asciinema.org/a/wdS0xREWaCMrsiQ4rYNVEAHwD
 ### Asciinema brain-calc
 https://asciinema.org/a/sTMZR6vL9jc3tPQvMTVxJxFgG
 ### Asciinema brain-gcd

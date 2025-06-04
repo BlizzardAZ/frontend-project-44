@@ -1,30 +1,23 @@
-// import { greetUserByName, askRandomQuestion, getAnswer, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
+import { runGame } from '../index.js'
 
-// function isEvenGame() {
-//   const userName = greetUserByName()
+function runBrainEvenGame() {
+  function getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 
-//   const iterNum = 3
-//   let allAnswersCorrect = true
+  const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".'
+  function generateQuestionAnswer() {
+    const num = getRandomInt(1, 100)
 
-//   for (let i = 0; i < iterNum; i++) {
-//     askRandomQuestion('Answer "yes" if the number is even, otherwise answer "no".')
+    const question = `Question: ${num}`
+    const correctAnswer = (num % 2 === 0) ? 'yes' : 'no'
 
-//     const num = getRandomInt(0, 100)
-//     console.log(`Question: ${num}`)
+    return { question, correctAnswer }
+  }
 
-//     const userAnswer = getAnswer().toLowerCase()
-//     const correctAnswer = (num % 2 === 0) ? 'yes' : 'no'
+  runGame(gameDescription, generateQuestionAnswer)
+}
 
-//     const isCorrect = compareAnswers(userAnswer, correctAnswer)
-//     if (!isCorrect) {
-//       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-//       allAnswersCorrect = false
-//       break
-//     }
-//   }
-//   if (allAnswersCorrect) {
-//     greetWinnerByName(userName)
-//   }
-// };
-
-// export { isEvenGame }
+export { runBrainEvenGame }
