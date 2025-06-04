@@ -10,7 +10,7 @@ function runGame(gameDescription, generateQuestionAnswer) {
     const { question, correctAnswer } = generateQuestionAnswer()
     console.log(question)
     const userAnswer = readlineSync.question('Your answer: ')
-    if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+    if (userAnswer.toString().toLowerCase() === correctAnswer.toString().toLowerCase()) {
       console.log('Correct!')
     }
     else {
