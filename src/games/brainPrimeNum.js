@@ -1,29 +1,36 @@
-// import { greetUserByName, askRandomQuestion, getAnswer, isPrimeNum, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
+import { runGame } from '../index.js'
 
-// function isPrimeGame() {
-//   const userName = greetUserByName()
+function runBrainPrimeNumGame() {
+  function getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 
-//   const iterNum = 3
-//   let allAnswersCorrect = true
+  function isPrimeNum(num) {
+    if (num <= 1) {
+      return 'no'
+    }
 
-//   for (let i = 0; i < iterNum; i++) {
-//     askRandomQuestion('Answer "yes" if given number is prime. Otherwise answer "no".')
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return 'no'
+      }
+    }
+    return 'yes'
+  }
 
-//     const num = getRandomInt(0, 100)
-//     console.log(`Question: ${num}`)
+  const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+  function generateQuestionAnswer() {
+    const num = getRandomInt(0, 100)
 
-//     const userAnswer = getAnswer().toLowerCase()
-//     const correctAnswer = isPrimeNum(num)
-//     const isCorrect = compareAnswers(userAnswer, correctAnswer)
-//     if (!isCorrect) {
-//       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-//       allAnswersCorrect = false
-//       break
-//     }
-//   };
-//   if (allAnswersCorrect) {
-//     greetWinnerByName(userName)
-//   };
-// };
+    const question = `Question: ${num}`
+    const correctAnswer = isPrimeNum(num)
 
-// export { isPrimeGame }
+    return { question, correctAnswer }
+  }
+
+  runGame(gameDescription, generateQuestionAnswer)
+}
+
+export { runBrainPrimeNumGame }
