@@ -57,7 +57,7 @@ https://asciinema.org/a/VrlgD6Wv00DcomhtEjSZbtzAN
 ### Asciinema brain-calc
 https://asciinema.org/a/sTMZR6vL9jc3tPQvMTVxJxFgG
 ### Asciinema brain-gcd
-https://asciinema.org/a/04Vm4hrGq6ytPqTe4UtMVtfqC
+https://asciinema.org/a/oDCi7CkrnHsjNolnAsaYK6whh
 ### Asciinema brain-progression
 https://asciinema.org/a/bmMffNl2zbZScTSWgO0fbeKBN
 ### Asciinema brain-prime

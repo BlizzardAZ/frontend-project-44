@@ -71,24 +71,24 @@
 //   return arr[randomIndex]
 // };
 
-// // function getCommonDivisor(x, y) {
-// //   if (x === 0) return y
-// //   if (y === 0) return x
-// //   if (x === y) return x
+// function getCommonDivisor(x, y) {
+//   if (x === 0) return y
+//   if (y === 0) return x
+//   if (x === y) return x
 
-// //   if (x < y) {
-// //     const temp = x
-// //     x = y
-// //     y = temp
-// //   }
+//   if (x < y) {
+//     const temp = x
+//     x = y
+//     y = temp
+//   }
 
-// //   while (y !== 0) {
-// //     const temp = x % y
-// //     x = y
-// //     y = temp
-// //   }
-// //   return x
-// // };
+//   while (y !== 0) {
+//     const temp = x % y
+//     x = y
+//     y = temp
+//   }
+//   return x
+// };
 
 // // function createProgression(a1, d, length) {
 // //   const progression = []

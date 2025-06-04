@@ -1,31 +1,43 @@
-// import { greetUserByName, askRandomQuestion, getAnswer, getCommonDivisor, compareAnswers, greetWinnerByName, getRandomInt } from './brainGamesLogic.js'
+import { runGame } from '../index.js'
 
-// function getCommonDivisorGame() {
-//   const userName = greetUserByName()
+function runCommonDivisorGame() {
+  function getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min
+  }
 
-//   const iterNum = 3
-//   let allAnswersCorrect = true
+  function getCommonDivisor(x, y) {
+    if (x === 0) return y
+    if (y === 0) return x
+    if (x === y) return x
 
-//   for (let i = 0; i < iterNum; i++) {
-//     const x = getRandomInt(1, 100)
-//     const y = getRandomInt(1, 100)
+    if (x < y) {
+      const temp = x
+      x = y
+      y = temp
+    }
 
-//     askRandomQuestion('Find the greatest common divisor of given numbers.')
-//     askRandomQuestion(`Question: ${x} ${y}`)
+    while (y !== 0) {
+      const temp = x % y
+      x = y
+      y = temp
+    }
+    return x
+  }
 
-//     const userAnswer = getAnswer()
-//     const correctAnswer = getCommonDivisor(x, y)
+  const gameDescription = 'Find the greatest common divisor of given numbers.'
+  function generateQuestionAnswer() {
+    const x = getRandomInt(1, 50)
+    const y = getRandomInt(1, 50)
 
-//     const isCorrect = compareAnswers(userAnswer, correctAnswer)
-//     if (!isCorrect) {
-//       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".\nLet's try again, ${userName}!`)
-//       allAnswersCorrect = false
-//       break
-//     }
-//   }
-//   if (allAnswersCorrect) {
-//     greetWinnerByName(userName)
-//   }
-// };
+    const question = `Question: ${x} ${y}`
+    const correctAnswer = getCommonDivisor(x, y)
 
-// export { getCommonDivisorGame }
+    return { question, correctAnswer }
+  }
+
+  runGame(gameDescription, generateQuestionAnswer)
+}
+
+export { runCommonDivisorGame }
