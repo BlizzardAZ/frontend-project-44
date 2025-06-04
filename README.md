@@ -21,31 +21,31 @@ make install
 brain-games
 ```
 
-## Run "is even" game
+### Run "is even" game
 
 ```bash
 brain-even
 ``` 
 
-## Run "calculator" game
+### Run "calculator" game
 
 ```bash
 brain-calc
 ``` 
 
-## Run "get common divisor" game
+### Run "get common divisor" game
 
 ```bash
 brain-gcd
 ``` 
 	
-## Run "find the missing progression element" game
+### Run "find the missing progression element" game
 
 ```bash
 brain-progression
 ```	
 
-## Run "is number prime" game
+### Run "is number prime" game
 
 ```bash
 brain-prime 
@@ -54,11 +54,11 @@ brain-prime
 
 ## Asciinema brain-even
 https://asciinema.org/a/wdS0xREWaCMrsiQ4rYNVEAHwD
-### Asciinema brain-calc
+##### Asciinema brain-calc
 https://asciinema.org/a/sTMZR6vL9jc3tPQvMTVxJxFgG
-### Asciinema brain-gcd
+##### Asciinema brain-gcd
 https://asciinema.org/a/oDCi7CkrnHsjNolnAsaYK6whh
-### Asciinema brain-progression
-https://asciinema.org/a/bmMffNl2zbZScTSWgO0fbeKBN
-### Asciinema brain-prime
+##### Asciinema brain-progression
+https://asciinema.org/a/QKm3wiMFTOarXj0oHbgwn969l
+##### Asciinema brain-prime
 https://asciinema.org/a/h70aKWL2OuSY6d4muBuJb66mX
