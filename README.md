@@ -52,13 +52,14 @@ brain-prime
 ```
 
 
-## Asciinema brain-even
+## Asciinemas:
+##### brain-even
 https://asciinema.org/a/wdS0xREWaCMrsiQ4rYNVEAHwD
-##### Asciinema brain-calc
+##### brain-calc
 https://asciinema.org/a/sTMZR6vL9jc3tPQvMTVxJxFgG
-##### Asciinema brain-gcd
+##### brain-gcd
 https://asciinema.org/a/oDCi7CkrnHsjNolnAsaYK6whh
-##### Asciinema brain-progression
+##### brain-progression
 https://asciinema.org/a/QKm3wiMFTOarXj0oHbgwn969l
-##### Asciinema brain-prime
+##### brain-prime
 https://asciinema.org/a/h70aKWL2OuSY6d4muBuJb66mX
