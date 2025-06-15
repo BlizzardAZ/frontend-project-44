@@ -1,12 +1,7 @@
 import { runGame } from '../index.js'
+import { getRandomInt } from '../utils/randomInt.js'
 
 function runBrainEvenGame() {
-  function getRandomInt(min, max) {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  }
-
   const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".'
   function generateQuestionAnswer() {
     const num = getRandomInt(1, 100)

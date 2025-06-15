@@ -1,12 +1,7 @@
 import { runGame } from '../index.js'
+import { getRandomInt } from '../utils/randomInt.js'
 
 function runCommonDivisorGame() {
-  function getRandomInt(min, max) {
-    min = Math.ceil(min)
-    max = Math.floor(max)
-    return Math.floor(Math.random() * (max - min + 1)) + min
-  }
-
   function getCommonDivisor(x, y) {
     if (x === 0) return y
     if (y === 0) return x
