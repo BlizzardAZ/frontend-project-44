@@ -1,9 +1,8 @@
 import readlineSync from 'readline-sync'
+import { brainGames } from './cli.js'
 
 function runGame(gameDescription, generateQuestionAnswer) {
-  console.log('Welcome to the Brain Games!')
-  const userName = readlineSync.question('May I have your name? ')
-  console.log('Hello, ' + userName + '!')
+  const userName = brainGames()
   console.log(gameDescription)
 
   let iterNum = 3
